@@ -1,8 +1,8 @@
 # onscripter-jh-rg300x
 [WIP] My ONScripter-jh RG300X port
 
-## bugs, todo  
-* GCWZero / gcw0 opendingux mips (mipsel) gcc toolchain, only support building on 32bit OS    
+## Bugs, TODO    
+* (Done) GCWZero / gcw0 opendingux mips (mipsel) gcc toolchain, only support building on 32bit OS    
 * Font not shown
 * Key mapping  
 * 16/32 colors ???  
@@ -11,7 +11,7 @@
 * (origin) https://git.libretro.com/libretro-infrastructure/libretro-build-dingux/-/tree/master/toolchain  
 * Only suppurt 32bit, I use ubuntu14 32bit
 * opendingux-gcw0-toolchain.2014-08-20.tar.bz2
-* (not tested) opendingux-gcw0-toolchain.2021-09-08.tar.bz2
+* (Not tested) opendingux-gcw0-toolchain.2021-09-08.tar.bz2
 * Got from libretro git  
 ```
 https://github.com/Ninoh-FOX/toolchain/releases/tag/08-09-2021
