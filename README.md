@@ -3,7 +3,7 @@
 
 ## Bugs, TODO    
 * (Done) GCWZero / gcw0 opendingux mips (mipsel) gcc toolchain, only support building on 32bit OS    
-* (Done) Font not shown
+* (Done, fixed) Font not shown, and the black arrow cursor is not hidden   
 * Key mapping  
 * 16/32 colors ???  
 
