@@ -3,6 +3,10 @@
 # Makefile.Linux - Makefile rules for linux
 #
 
+#cross-compile configure freetype-2.3.12
+#PATH=$PATH:/home/wmt/work_rg300x/gcw0-toolchain/usr/bin/ ./configure --prefix=/home/wmt/work_rg300x/local --host=mipsel-linux
+#PATH=$PATH:/home/wmt/work_rg300x/gcw0-toolchain/usr/bin/ make
+
 #copy this file from Makefile.Linux
 #
 #sudo apt-get install libsdl-dev
@@ -38,11 +42,15 @@ EXT_OBJS =
 ifeq ($(GCWZERO),1)
 SYSROOT?=/home/wmt/work_rg300x/gcw0-toolchain/usr/mipsel-gcw0-linux-uclibc/sysroot
 ARCH=
-DEFS = -DLINUX -DNDEBUG 
+DEFS = -DLINUX -DNDEBUG -DGCWZERO 
 #-DGCWZERO
-INCS = -Os $(ARCH) -I${SYSROOT}/usr/include -I${SYSROOT}/usr/include/SDL -I${SYSROOT}/usr/include/freetype2 -ffunction-sections -fdata-sections -fpermissive
+INCS = -Os $(ARCH) -I./SDL_ttf-2.0.9_mod  -I${SYSROOT}/usr/include -I${SYSROOT}/usr/include/SDL -I${SYSROOT}/usr/include/freetype2 -ffunction-sections -fdata-sections -fpermissive
 #-Wall
-LIBS = -L./libjpeg -L${SYSROOT}/usr/lib $(ARCH) -lSDL_ttf -lSDL_image -lSDL_mixer -lSDL -lfreetype -ljpeg -lpng -lz -lbz2 -lpthread -lm
+#-I./freetype-2.3.12/freetype2/freetype
+LIBS = -L${SYSROOT}/usr/lib $(ARCH) -lSDL_image -lSDL_mixer -lSDL -lfreetype -ljpeg -lpng -lz -lbz2 -lpthread -lm
+#-L./freetype-2.3.12/ 
+#-L./libjpeg 
+#-lSDL_ttf 
 EXT_FLAGS =
 else
 DEFS = -DLINUX -DGCWZERO -g3 -O0 

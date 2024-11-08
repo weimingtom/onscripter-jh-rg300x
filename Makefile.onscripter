@@ -18,6 +18,7 @@ GUI_OBJS = ONScripter$(OBJSUFFIX) \
 	ONScripter_text$(OBJSUFFIX) \
 	AnimationInfo$(OBJSUFFIX) \
 	FontInfo$(OBJSUFFIX) \
+	SDL_ttf-2.0.9_mod/SDL_ttf$(OBJSUFFIX) \
 	DirtyRect$(OBJSUFFIX) \
 	resize_image$(OBJSUFFIX)
 
@@ -92,7 +93,7 @@ clean:
 	-$(RM) *$(OBJSUFFIX)
 
 .cpp$(OBJSUFFIX):
-	$(CC) $(CFLAGS) $<
+	$(CC) $(CFLAGS) -o $@ $<
 
 SarReader$(OBJSUFFIX):    BaseReader.h SarReader.h 
 NsaReader$(OBJSUFFIX):    BaseReader.h SarReader.h NsaReader.h 
